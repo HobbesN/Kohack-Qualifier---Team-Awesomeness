@@ -1,4 +1,4 @@
-import math
+﻿import math
 import random
 import json
 
@@ -10,10 +10,13 @@ class Assignment:
         self.Class = Platform
 
 
-def load_model(path):
-    with open(path, "r") as f:
+def load_model():
+    output = []
+    with open("model.json", "r") as f:
         data = json.load(f)
-    return data 
+        for i in range(0,len(data)):
+            output= data["DataList"]
+    return Turn_List_to_list_of_assignments(output)
 def upload_List(CurrentList):
     if( math.floor(len(CurrentList)/4))!=len(CurrentList)/4:
         print("Error: List length is not a multiple of 4")
@@ -22,7 +25,7 @@ def upload_List(CurrentList):
         json.dump({"DataList": CurrentList}, f)
 def Turn_List_to_list_of_assignments(DataList):
     AssignmentList = [0]*math.floor(len(DataList)/4)
-    for i in range(0, len(DataList)/4):
+    for i in range(0, math.floor(len(DataList)/4)):
         AssignmentList[i]=Assignment(DataList[4*i],DataList[4*i+1], DataList[4*i+2], DataList[4*i+3])
     return AssignmentList
 def sortByQuality(AssignmentList,quality):
@@ -50,7 +53,7 @@ def PlatformSort(OurList):
             OutputList.append(List[i])
             List.remove(List[i])
     for i in range(0, len(List)):
-        if List[i].Platform=="????? ??????":
+        if List[i].Platform=="בשביל העברית":
             OutputList.append(List[i])
             List.remove(List[i])
     for i in range(0, len(List)):
@@ -84,7 +87,7 @@ def ClassSort(OurList):
             OutputList.append(List[i])
             List.remove(List[i])
     for i in range(0, len(List)):
-        if List[i].Class=="?????":
+        if List[i].Class=="עברית":
             OutputList.append(List[i])
             List.remove(List[i])
     for i in range(0, len(List)):
@@ -132,7 +135,7 @@ def ClassSort(OurList):
             OutputList.append(List[i])
             List.remove(List[i])
     for i in range(0, len(List)):
-        if List[i].Class=="????":
+        if List[i].Class=="חומש":
             OutputList.append(List[i])
             List.remove(List[i])
     for i in range(0, len(List)):
@@ -144,11 +147,11 @@ def ClassSort(OurList):
             OutputList.append(List[i])
             List.remove(List[i])
     for i in range(0, len(List)):
-        if List[i].Class=="?????":
+        if List[i].Class=="נביים":
             OutputList.append(List[i])
             List.remove(List[i])
     for i in range(0, len(List)):
-        if List[i].Class=="??":
+        if List[i].Class=="נכ":
             OutputList.append(List[i])
             List.remove(List[i])
     for i in range(0, len(List)):
@@ -164,7 +167,7 @@ def ClassSort(OurList):
             OutputList.append(List[i])
             List.remove(List[i])
     for i in range(0, len(List)):
-        if List[i].Class=="????":
+        if List[i].Class=="גמרא":
             OutputList.append(List[i])
             List.remove(List[i])
     for i in range(0, len(List)):
@@ -355,4 +358,12 @@ def ClassSort(OurList):
         if List[i].Class=="AP physics":
             OutputList.append(List[i])
             List.remove(List[i])
-dataList = {"Hebrew Work Sheet 1", "Hebrew", 2026228, "Google Classroom", "Math Homework 1", "Math", 2026310, "Blackbaud"}
+    for i in range(0, len(List)):
+            OutputList.append(List[i])
+    return OutputList
+newlist= load_model()
+print(newlist)
+print(len(newlist))
+print(len(sortByQuality(newlist,"Class")))
+dataList = ["Hebrew Work Sheet 1", "Hebrew", 2026228, "Google Classroom", "Math Homework 1", "Math", 2026310, "Blackbaud"]
+upload_List(dataList)
