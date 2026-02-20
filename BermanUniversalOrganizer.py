@@ -73,6 +73,7 @@ def PlatformSort(OurList):
             OutputList.append(List[i])
             List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
+        if List[i].Class!="0":
             OutputList.append(List[i])
     return OutputList
 def ClassSort(OurList):
@@ -397,4 +398,5 @@ print(len(newlist))
 newnewlist = sortByQuality(newlist,"DueDate")
 print(typelist(newnewlist,"DueDate"))
 dataList = ["Hebrew Work Sheet 1", "Hebrew", 2026228, "Google Classroom", "Math Homework 1", "Math", 2026310, "Blackbaud"]
+
 upload_List(dataList)
