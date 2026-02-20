@@ -7,7 +7,7 @@ class Assignment:
         self.AssignmentName = AssignmentName
         self.Class = Class
         self.DueDate = DueDate
-        self.Class = Platform
+        self.Platform = Platform
 
 
 def load_model():
@@ -31,9 +31,9 @@ def Turn_List_to_list_of_assignments(DataList):
 def sortByQuality(AssignmentList,quality):
     outputlist = [0]*len(AssignmentList)
     if quality == "DueDate":
-        outputlist = AssignmentList.sort(key=lambda x: x.DueDate)
+        outputlist = sortByDueDate(AssignmentList)
     elif quality == "Class":
-        outpuList = ClassSort(AssignmentList)
+        outputlist = ClassSort(AssignmentList)
     elif quality == "Platform":
         outputlist = PlatformSort(AssignmentList)
     return outputlist
@@ -43,35 +43,35 @@ def PlatformSort(OurList):
     for i in range(0, len(List)):
         if List[i].Platform=="Google Classroom":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Platform=="GClassroom":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Platform=="Google Class":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Platform=="בשביל העברית":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Platform=="Bishvil HaIvrit":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Platform=="Bishvil Haivrit":
             OutputList.append(List[i]) 
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Platform=="Blackbaud":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Platform=="BlackBaud":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
             OutputList.append(List[i])
     return OutputList
@@ -81,289 +81,320 @@ def ClassSort(OurList):
     for i in range(0, len(List)):
         if List[i].Class=="Hebrew":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="hebrew":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="עברית":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="English":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="English":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="History":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="history":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="American Studies":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="american studies":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="Euro":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="euro":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="European History":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="european history":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="Chumash":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="חומש":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="Navi":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="Nach":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="נביים":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="נכ":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="Judaic Studies":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="Gemara":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="gemara":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="גמרא":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="math":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="Math":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="Mathematics":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="mathematics":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="algebra":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="Algebra":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="Geometry":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="geometry":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="precalc":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="Precalc":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="pre-calc":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="Pre-calc":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="Pre-Calc":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="pre-calculus":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="Calculus":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="calculus":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="Calc":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="calc":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="calc AB":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="Calc AB":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="calc ab":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="Calc ab":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="calculus AB":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="Calculus AB":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="calculus ab":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="Calculus ab":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="calc BC":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="Calc BC":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="calc bc":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="Calc bc":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="calculus BC":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="Calculus BC":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="calculus bc":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="Calculus bc":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="Science":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="science":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="sci":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="Biology":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="biology":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="bio":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="Chem":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="chem":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="Chemistry":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="chemistry":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="Physics":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="physics":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
         if List[i].Class=="AP physics":
             OutputList.append(List[i])
-            List.remove(List[i])
+            List[i]=Assignment("0","0","0","0")
     for i in range(0, len(List)):
+        if List[i].Class!="0":
             OutputList.append(List[i])
     return OutputList
+def sortByDueDate(AssignmentList):
+    newlist = []
+    for i in range(0, len(AssignmentList)):
+        
+        allAreGreater = False
+        for j in range(0, len(newlist)):
+            if AssignmentList[i].DueDate<newlist[j].DueDate:
+                newlist.insert(j, AssignmentList[i])
+                break
+            if j==len(newlist)-1:
+                allAreGreater = True
+        if len(newlist)==0:
+            newlist.append(AssignmentList[i])
+        if allAreGreater:
+            newlist.append(AssignmentList[i])
+    return newlist
+
+def typelist(assignmentList,type):
+    outputList = []
+    if type == "Class":
+        for i in range(0, len(assignmentList)):
+            outputList.append(assignmentList[i].Class)
+    if type == "Platform":
+        for i in range(0, len(assignmentList)):
+            outputList.append(assignmentList[i].Platform)
+    if type == "DueDate":
+        for i in range(0, len(assignmentList)):
+            outputList.append(assignmentList[i].DueDate)
+    return outputList
 newlist= load_model()
 print(newlist)
 print(len(newlist))
-print(len(sortByQuality(newlist,"Class")))
+newnewlist = sortByQuality(newlist,"DueDate")
+print(typelist(newnewlist,"DueDate"))
 dataList = ["Hebrew Work Sheet 1", "Hebrew", 2026228, "Google Classroom", "Math Homework 1", "Math", 2026310, "Blackbaud"]
 upload_List(dataList)
